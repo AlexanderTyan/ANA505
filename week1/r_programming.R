@@ -1,13 +1,14 @@
-# This is an `.R`` script
+# This is an `.R` script
 
 # Calling a print function:
 print("Hello world!")
 
-# Install a package (commented out for now)
+# Install a package (commented out for now):
 # install.packages(pkgs = "phonenumber")
 
-# Import a package (once its installed):
+# Import a package (once it is installed):
 library(package = "phonenumber")
+# See the vignette:
 # print(vignette(package = "phonenumber"))
 
 # Call help on a package's function:
@@ -73,3 +74,36 @@ hp_data <- tibble(first_name = main_characters,
                   n_kids = n_kids,
                   survived = c(TRUE, TRUE, TRUE))
 print(hp_data)
+
+# Load a DataFrame from a CSV, using `readr` package:
+# install.packages("readr")
+library("rstudioapi") 
+library(package = "readr")
+
+# So that we can find this file:
+setwd(dirname(getActiveDocumentContext()$path))
+
+daily_show <- read_csv(file = "daily_show_guests.csv",
+                       skip = 4)
+
+# DataFrame characteristics:
+print(dim(x = daily_show))
+print(nrow(x = daily_show))
+print(ncol(x = daily_show))
+print(str(object = daily_show))  # Structure of an R object
+print(summary(object = daily_show))  # Summarize DataFrame columns
+
+# Extract 1st 2 rows, using `dplyr`:
+# install.packages("dplyr")
+library(package = "dplyr")
+print(slice(.data = hp_data, c(1:2)))
+
+# Extract 1st and 4th columns, using `dplyr`:
+print(select(.data = hp_data, c(1, 4)))
+
+# DataFrame indexing:
+print(hp_data[1:2, 2])  # First two rows, second column
+
+print(hp_data[3, ])  # Last row, all columns
+
+
