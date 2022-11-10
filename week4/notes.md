@@ -39,5 +39,5 @@
 table.
   - A single observational unit is stored in multiple tables.
 - Data Cleaning/Preparation tools:
-  - R's `tidyr`
-  - R's `dplyr`
+  - R's `tidyr`: https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf
+  - R's `dplyr`: https://github.com/rstudio/cheatsheets/blob/main/data-transformation.pdf
