@@ -22,8 +22,7 @@ print(head(x = hair_eye_sex_color, n = 2))
 #Install and call the package dplyr
 #TASK: Write the functions to install and call dplyr
 
-# TODO: uncomment before commit
-# install.packages(pkgs = "dplyr")
+install.packages(pkgs = "dplyr")
 # This is not strictly speaking necessary as I'll call `dplyr` explicitly
 library(package = "dplyr")
 
