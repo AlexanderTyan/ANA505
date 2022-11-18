@@ -86,8 +86,8 @@ piped_version <- mysample %>%
     filter(incidents_85_99 < 25) %>%
     rename(seats = avail_seat_km_per_week) %>%
     select(incidents_00_14, incidents_85_99) %>%
-    summary()
-print(piped_version)
+    summary() %>%
+    print()
 
 # Check the answer:
 stopifnot(all.equal(target = mysample4, current = piped_version))
