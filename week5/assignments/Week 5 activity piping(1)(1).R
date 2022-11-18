@@ -90,4 +90,4 @@ piped_version <- mysample %>%
 print(piped_version)
 
 # Check the answer:
-print(all.equal(target = mysample4, current = piped_version))
+stopifnot(all.equal(target = mysample4, current = piped_version))
